@@ -1,8 +1,6 @@
 # f-measure
 
-This is a Python package consisting of the 
-implementation of the Google Scholar scraping
-code corresponding to the DMKD paper on F-measure.
+This is a Python package providing an implementation of the Google Scholar scraping code to obtain counts for the F-measure over time.
 
 ## Dependencies
 
