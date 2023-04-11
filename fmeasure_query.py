@@ -22,7 +22,7 @@ START_YEAR = 1980
 END_YEAR = 2022
 
 # Output file name
-CSV_FILE = 'out/google-scholar-query-counts-20220505.csv'
+CSV_FILE = 'out/google-scholar-query-counts-20230409.csv'
 
 # Google scholar URL with query parameter, start year, end year, with no
 # patent flag enabled by `as_sdt=1,5`
@@ -87,12 +87,12 @@ def persist_gs_query_result_counts(query_list, start_year, end_year):
     writer.writerow(['query', 'year', 'count'])
 
     for query in query_list:
-      for year in xrange(start_year, end_year + 1):
+      for year in range(start_year, end_year + 1):
         logging.info('Query %s for year %s' % (query, year))
+        print('Query %s for year %s' % (query, year))
         count = __retrieve_gs_results_count__(query, year, year)
         logging.info('\t%s result(s)' % count)
         writer.writerow([query, year, count])
-
 
 if __name__ == '__main__':
   log_file_name = 'out/gs-query.log'
